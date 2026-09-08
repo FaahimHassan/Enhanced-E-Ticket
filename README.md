@@ -1,4 +1,4 @@
-# Enhanced E-Ticket — Version 2
+# Enhanced E-Ticket 
 
 This version extends the supplied Eticket.zip using procedural PHP, MySQLi, handwritten CSS and vanilla JavaScript. No application framework or npm installation is required.
 
@@ -26,15 +26,13 @@ This version extends the supplied Eticket.zip using procedural PHP, MySQLi, hand
 
 See UPGRADE.md for Bengali step-by-step instructions, demo credentials, the upgrade process and feature walkthrough. For a fresh install: place eticket inside XAMPP htdocs, start Apache/MySQL, import database/eticket_db.sql once into a fresh database, configure config.php and open http://localhost/eticket/. Search the day after SQL import for sample journeys.
 
-## Main changes from the original scope
-
-The latest requested screenshots extend the original no-payment/no-feedback scope. This version adds manual payment/refund records, complaints and feedback, operator cancellation, controlled seat blocking, and 10-second AJAX summary refresh. There is still no real payment gateway, OTP, chatbot, map, AI feature, or PDF ticket generator. No Site deployment is included in this update.
+We added manual payment/refund records, complaints and feedback, operator cancellation, controlled seat blocking, and 10-second AJAX summary refresh. There is still no real payment gateway, OTP, chatbot, map, AI feature, or PDF ticket generator. No Site deployment is included in this update.
 
 ## Security and consistency
 
 Password hashing, session role checks, CSRF tokens, output escaping and prepared MySQLi statements are retained. New actions repeat validation on the server. Providers only access their own services and booking-linked conversations. Transactions and shared row locks protect seat inventory and cancellation. Payment transitions prevent duplicate payment/refund recording and require a confirmed/unpaid or cancelled/paid booking respectively. See UPGRADE.md for exact business rules.
 
-## Four-member task split
+## Mai tasks
 
 1. Authentication, registration/approval and account management.
 2. Transport search, booking, inventory and schedule cancellation.
