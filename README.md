@@ -32,7 +32,7 @@ We added manual payment/refund records, complaints and feedback, operator cancel
 
 Password hashing, session role checks, CSRF tokens, output escaping and prepared MySQLi statements are retained. New actions repeat validation on the server. Providers only access their own services and booking-linked conversations. Transactions and shared row locks protect seat inventory and cancellation. Payment transitions prevent duplicate payment/refund recording and require a confirmed/unpaid or cancelled/paid booking respectively. See UPGRADE.md for exact business rules.
 
-## Mai tasks
+## Main tasks
 
 1. Authentication, registration/approval and account management.
 2. Transport search, booking, inventory and schedule cancellation.
